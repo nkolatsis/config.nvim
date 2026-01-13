@@ -640,6 +640,7 @@ require('lazy').setup({
             },
           },
         },
+        terraformls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -710,6 +711,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        terraform = { 'terraform_fmt' },
+        tf = { 'terraform_fmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
